@@ -10,9 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_08_30_151323) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2022_08_30_105337) do
+>>>>>>> e20fb90c082d83598cd647cab8b3d5a52bd8a581
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "offers", force: :cascade do |t|
+    t.string "description"
+    t.string "title"
+    t.string "pet"
+    t.string "address"
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_offers_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -30,4 +47,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_151323) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "offers", "users"
 end

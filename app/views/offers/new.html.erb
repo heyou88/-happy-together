@@ -1,0 +1,13 @@
+<%= form_with model: @offer do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :pet %>
+  <%= f.text_field :pet %>
+  <%= f.label :start_date %>
+  <%= f.text_field :end_date %>
+  <%= f.submit %>
+<% end %>
