@@ -17,6 +17,9 @@ users = User.create(
   {email: "ariana.antler@gmail.com", first_name: "Ariana", last_name: "Antler", user_name: "ari-ant", password: "123456" },
 )
 
+
+
+
 puts "Creating offers"
 
 Offer.create(user: User.last, title: "Mina needs a cat sitter",
