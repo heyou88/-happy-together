@@ -1,0 +1,7 @@
+<h2>See all offers </h2>
+<% @offers.each do |offer| %>
+<%= offer.title %>
+<%= link_to "detail", offer_path(offer)%>
+<% end %>
+
+<%= link_to "create new offer", new_offer_path %>
