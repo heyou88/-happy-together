@@ -5,6 +5,7 @@
   border: none;
   font-size: 1.4rem;
   padding: 7px 45px;
+  box-shadow: 0 1px 2px rgb(252, 252, 252);
 
   &:hover {
     background-color: #7b8079;
@@ -14,7 +15,7 @@
 
 .btn-ghost {
   color: #fcfcfc;
-  border: 3px solid #FFBF69;
+  border: 3px solid #FF9F1C;
   height: 50px;
   width: 175px;
   padding: 8px 24px;
@@ -22,6 +23,7 @@
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+
 }
 
 .btn-ghost:hover {

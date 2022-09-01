@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .home-page {
-  background: linear-gradient(180deg, #08799C -2.4%, #05495E 106.65%), asset-url("app/assets/images/Icon.svg");
+  background: linear-gradient(180deg, #08799C -2.4%, #05495E 106.65%);
   }
 
 .text-block {
@@ -58,7 +58,7 @@ font-weight: 400;
 }
 
 .search-form-control .form-control {
-  height: 3.5rem;
+  height: 3rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
 }
@@ -79,14 +79,20 @@ font-weight: 400;
 }
 
 .log-in{
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
   position: relative;
-  bottom: 20px;
+  top: 63px;
 
+}
+
+.signup-link{
+color: white;
+text-decoration: none;
 
 
 }
