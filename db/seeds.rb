@@ -29,7 +29,7 @@ user2.save
 
 user3 = User.new(
   email: "patrick.parrot@gmail.com", first_name: "Patrick", last_name: "Parrot", user_name: "echoecho", password: "123456")
-pic_user3 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662038609/sitpet4bed/Petsitter%20User2%20Chris%20Cuddler/Man_with_a_Cat_on_his_head_-_Manhattan__286179412197_29_grnqvz.jpg"
+pic_user3 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662038951/sitpet4bed/Petsitter%20User3%20Patrick%20Parrot/Ara_militaris_-pirate_festival__282007_29-8a_ue0jcq.jpg"
 file3 = URI.open(pic_user3)
 user3.photo.attach(io: file3, filename: "Patrick_Parrot.jpg", content_type: "image/png")
 user3.save
@@ -37,8 +37,8 @@ user3.save
 
 user4 = User.new(
   email: "steven.strange@gmail.com", first_name: "Steven", last_name: "Strange", user_name: "quiet-stevie", password: "123456")
-pic_user4 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662038609/sitpet4bed/Petsitter%20User2%20Chris%20Cuddler/Man_with_a_Cat_on_his_head_-_Manhattan__286179412197_29_grnqvz.jpg"
-file4 = URI.open(pic_user3)
+pic_user4 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662039180/sitpet4bed/Petsitter%20User4%20Steven%20Strange/dog-and-man-175549_1280_puyuol.jpg"
+file4 = URI.open(pic_user4)
 user4.photo.attach(io: file4, filename: "Steven_Strange.jpg", content_type: "image/png")
 user4.save
 
@@ -46,25 +46,51 @@ user4.save
 
 user5 = User.new(
   email: "henry.rubin@gmail.com", first_name: "Henry", last_name: "Rubin", user_name: "glamour", password: "123456")
+pic_user5 = ""
+file5 = URI.open(pic_user5)
+user5.photo.attach(io: file5, filename: "Henry_Rubin.jpg", content_type: "image/png")
+user5.save
+
+
 
 user6 = User.new(
   email: "william.butler@gmail.com", first_name: "William", last_name: "Butler", user_name: "palace-brother", password: "123456")
+pic_user6 = ""
+file6 = URI.open(pic_user6)
+user6.photo.attach(io: file6, filename: "William_Butler.jpg", content_type: "image/png")
+user6.save
+
+
 
 user7 = User.new(
   email: "lydia.locksmith@gmail.com", first_name: "Lydia", last_name: "Locksmith", user_name: "silent-lydia", password: "123456")
 pic_user7 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662039949/sitpet4bed/Petsitter%20User7%20Lydia%20Locksmith/47055535804_daea4cdfdf_b_afmeet.jpg"
 file7 = URI.open(pic_user7)
-user7.photo.attach(io: file7, filename: "lydia.jpg", content_type: "image/png")
+user7.photo.attach(io: file7, filename: "Lydia_Locksmith.jpg", content_type: "image/png")
 user7.save
 
 
-# user8 = User.new(
-#   email: "ariana.antler@gmail.com", first_name: "Ariana", last_name: "Antler", user_name: "ari-ant", password: "123456")
-# user9 = User.new(
-#   email: "giorgina.vasari@gmail.com", first_name: "Giorgina", last_name: "Vasari", user_name: "medici", password: "123456")
-# user10 = User.new(
-#   email: "sandra.sitwell@gmail.com", first_name: "Sandra", last_name: "Sitwell", user_name: "sitting-dame", password: "123456")
+user8 = User.new(
+  email: "ariana.antler@gmail.com", first_name: "Ariana", last_name: "Antler", user_name: "ari-ant", password: "123456")
+pic_user8 = ""
+file8 = URI.open(pic_user8)
+user8.photo.attach(io: file8, filename: "Lydia_Locksmith.jpg", content_type: "image/png")
+user8.save
 
+
+user9 = User.new(
+email: "giorgina.vasari@gmail.com", first_name: "Giorgina", last_name: "Vasari", user_name: "medici", password: "123456")
+pic_user9 = ""
+file9 = URI.open(pic_user9)
+user9.photo.attach(io: file9, filename: "Lydia_Locksmith.jpg", content_type: "image/png")
+user9.save
+
+user10 = User.new(
+email: "sandra.sitwell@gmail.com", first_name: "Sandra", last_name: "Sitwell", user_name: "sitting-dame", password: "123456")
+pic_user10 = ""
+file10 = URI.open(pic_user10)
+user10.photo.attach(io: file10, filename: "Lydia_Locksmith.jpg", content_type: "image/png")
+user10.save
 
 
 # puts "Creating offers"
