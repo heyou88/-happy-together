@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-    @booking.status = "confirmed"
+    @booking.confirmed!
     @booking.save
     redirect_to offers_path, notice: "Booking was successfully create"
   end
