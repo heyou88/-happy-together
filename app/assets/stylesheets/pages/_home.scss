@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+.home-page {
+  background: linear-gradient(180deg, #08799C -2.4%, #05495E 106.65%);
+  }
+
 .text-block {
   display: flex;
   flex-direction: column;
@@ -31,19 +35,25 @@
   margin-top: 25px;
 }
 
+
 .form-control{
   margin-top: 40px;
-  border-radius: 25px;
+  border-radius: 25px;}
+
+.brand-name {
+font-size: 50px;
+font-weight: 400;
 }
 
 .search-form-control {
 
   position: relative;
   width:250px;
+  top:5px
 }
 
 .border{
-  border-radius: 50px;
+  border-radius: 20px;
 }
 
 .search-form-control .btn {
@@ -54,7 +64,7 @@
 }
 
 .search-form-control .form-control {
-  height: 3.5rem;
+  height: 3rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
 }
@@ -67,19 +77,28 @@
 
 .search-form {
   margin-top: 25px;
-
-}
-
-.home-page {
-background-color: #2EC4B6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white
 }
 
 .log-in{
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
+  position: relative;
+  top: 63px;
+
+}
+
+.signup-link{
+color: white;
+text-decoration: none;
 
 
 }
