@@ -1,10 +1,11 @@
 
 <div class="container text-block home-page">
   <div class="home-content">
-    <h1 class= "logo">logo</h1>
-    <h1>sitpet4bed</h1>
-    <h5>select a city</h5>
+    <h1 class= "logo"></h1>
+    <h1 class= "brand-name">sitpet4bed</h1>
+
     <div class= "search-form">
+      <h5>Select a city</h5>
        <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
           <div class="search-form-control form-group">
             <input class="form-control string required border" type="text" name="search[query]" id="search_query" />
@@ -18,8 +19,8 @@
         <p class="btn-main">start</p>
     </div>
     <div class="log-in">
-        <button class= "btn btn-ghost" >login</button>
-        <p>don't have an account? Sign up</p>
+        <%= link_to "login",   new_user_session_path, class: "btn btn-ghost" %>
+        <%= link_to "don't have an account? Sign up",  new_user_registration_path%>
     </div>
 
   </div>

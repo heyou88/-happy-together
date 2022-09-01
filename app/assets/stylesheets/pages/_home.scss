@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+.home-page {
+  background: linear-gradient(180deg, #08799C -2.4%, #05495E 106.65%), asset-url("app/assets/images/Icon.svg");
+  }
+
 .text-block {
   display: flex;
   flex-direction: column;
@@ -31,13 +35,19 @@
   margin-top: 25px;
 }
 
+.brand-name {
+font-size: 50px;
+font-weight: 400;
+}
+
 .search-form-control {
   position: relative;
   width:250px;
+  top:5px
 }
 
 .border{
-  border-radius: 50px;
+  border-radius: 20px;
 }
 
 .search-form-control .btn {
@@ -61,11 +71,11 @@
 
 .search-form {
   margin-top: 25px;
-
-}
-
-.home-page {
-background-color: #2EC4B6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white
 }
 
 .log-in{
@@ -74,6 +84,9 @@ background-color: #2EC4B6;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
+  position: relative;
+  bottom: 20px;
+
 
 
 }
