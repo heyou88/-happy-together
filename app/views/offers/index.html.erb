@@ -2,6 +2,8 @@
 <% @offers.each do |offer| %>
 <%= offer.title %>
 <%= link_to "detail", offer_path(offer)%>
+<%= cl_image_tag offer.user.photo.key, height: 300, width: 400, crop: :fill %>
+
 <% end %>
 
 <%= link_to "create new offer", new_offer_path %>
