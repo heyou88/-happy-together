@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_31_102329) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_31_134020) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_102329) do
     t.bigint "offer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status"
     t.index ["offer_id"], name: "index_bookings_on_offer_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -27,6 +28,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_102329) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "flat_owner_id"
+    t.bigint "pet_sitter_id"
+    t.index ["flat_owner_id"], name: "index_chatrooms_on_flat_owner_id"
+    t.index ["pet_sitter_id"], name: "index_chatrooms_on_pet_sitter_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -69,6 +74,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_102329) do
 
   add_foreign_key "bookings", "offers"
   add_foreign_key "bookings", "users"
+  add_foreign_key "chatrooms", "users", column: "flat_owner_id"
+  add_foreign_key "chatrooms", "users", column: "pet_sitter_id"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "offers", "users"
