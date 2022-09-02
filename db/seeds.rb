@@ -55,7 +55,7 @@ user5.save
 
 user6 = User.new(
   email: "william.butler@gmail.com", first_name: "William", last_name: "Butler", user_name: "palace-brother", password: "123456")
-pic_user6 = ""
+pic_user6 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662116932/sitpet4bed/Petsitter%20User6%20William%20Butler/46210044-young-man-relaxing-on-park-bench-on-a-summers-day_imn7zp.jpg"
 file6 = URI.open(pic_user6)
 user6.photo.attach(io: file6, filename: "William_Butler.jpg", content_type: "image/png")
 user6.save
@@ -87,7 +87,7 @@ user9.save
 
 user10 = User.new(
 email: "sandra.sitwell@gmail.com", first_name: "Sandra", last_name: "Sitwell", user_name: "sitting-dame", password: "123456")
-pic_user10 = ""
+pic_user10 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662114941/sitpet4bed/user10%20Sandra%20Sitwell%20British%20Shorthair/British_20Shorthair.1_p5myhu.jpg"
 file10 = URI.open(pic_user10)
 user10.photo.attach(io: file10, filename: "Sandra_Sitwell.jpg", content_type: "image/png")
 user10.save
@@ -103,6 +103,16 @@ It is very sunny with a balcony. Mina is a British
 short hair and is used to stay indoors all
 the time. She is super cuddly and needs a lot of attention.", pet:"British Shorthair cat", address: "Katzbachstraße 3, 10965 Berlin", start_date:	"01.10.2022", end_date:	"31.10.2022")
 
+file11 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662036109/sitpet4bed/user10%20Sandra%20Sitwell%20British%20Shorthair/2315705263_31d3aa21ba_c_g7n9od.jpg")
+file12 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035893/sitpet4bed/user10%20Sandra%20Sitwell%20British%20Shorthair/New_Orleans_June_07_-_Living_Room_tgplnu.jpg")
+file13 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035284/sitpet4bed/user10%20Sandra%20Sitwell%20British%20Shorthair/Female_British_Shorthair_cat_ayoi1i.jpg")
+offer1.photos.attach(io: file11, filename: "Kreuzberg-flat.jpg", content_type: "image/png")
+offer1.photos.attach(io: file12, filename: "Kreuzberg-flat 2.jpg", content_type: "image/png")
+offer1.photos.attach(io: file13, filename: "Mina from Kreuzberg-flat.jpg", content_type: "image/png")
+offer1.save
+
+
+
 
 offer2  = Offer.new(
   user: user9, title: "Dalmatiner Daisy needs a dog sitter", description: "Who wants to take care of our lovely Daisy.
@@ -112,6 +122,17 @@ offer2  = Offer.new(
   The house we are offering has 300 square meters and a garden with a lot of other animals that come over to visit and play with Daisy.
   Physical fitness and some conflict solving experience on your side might come handy" , pet: "Dalmatiner", address: "Hundekehlestraße 3, 14199 Berlin", start_date: "01.11.2022", end_date: "05.11.2022")
 
+file14 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662036096/sitpet4bed/offer2%20user9%20lively%20dalmatiner/Living_Room_vjveow.jpg")
+file15 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035885/sitpet4bed/offer2%20user9%20lively%20dalmatiner/9574629559_5b8d0a924f_nfjcdh.jpg")
+file16 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035076/sitpet4bed/offer2%20user9%20lively%20dalmatiner/Dalmatiner_3_fdsqjb.jpg")
+
+offer2.photos.attach(io: file14, filename: "Dalmatiner-flat.jpg", content_type: "image/png")
+offer2.photos.attach(io: file15, filename: "Dalmatiner-flat2.jpg", content_type: "image/png")
+offer2.photos.attach(io: file16, filename: "Daisy from Dalmatiner-flat.jpg", content_type: "image/png")
+
+offer2.save
+
+
 offer3  = Offer.new(
   user: user5, title: "Parrot Fridolin needs a petsitter", description: "	Are you experienced in taking care of intelligent birds?
   We are looking for a friendly and diligent bird sitter for our 7-year-old parrot Fridolin.
@@ -119,6 +140,18 @@ offer3  = Offer.new(
   You should have a great sense of humor and a lot of tolerance for insults.
   We offer you to live in a very beautiful and quiet ground floor apartment in Papageienviertel for 2 whole months.
   Please contact us, so we can get to know each other." , pet: "parrot", address: "Badstraße 67, 13357 Berlin", start_date: "15.10.2022", end_date: "14.12.2022")
+file17 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662038261/sitpet4bed/offer3%20user5%20Mr.%20Rubin%20with%20a%20parrot/Living_room_-pet_parrot_-cage-8a_tsyd5i.jpg")
+file18 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662118435/sitpet4bed/offer3%20user5%20Mr.%20Rubin%20with%20a%20parrot/Eclectic-living-room-with-a-bird-cage-lighting-option_hebanf.jpg")
+file19 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035176/sitpet4bed/offer3%20user5%20Mr.%20Rubin%20with%20a%20parrot/27805754320_9060952d22_b_dln4fo.jpg")
+
+offer3.photos.attach(io: file17, filename: "Parrot-flat.jpg", content_type: "image/png")
+offer3.photos.attach(io: file18, filename: "Parrot-flat2.jpg", content_type: "image/png")
+offer3.photos.attach(io: file19, filename: "Fridolin from Parrot-flat.jpg", content_type: "image/png")
+offer3.save
+
+
+
+
 
 offer4  = Offer.new(
   user: user8, title: "Anteater needs a pet sitter", description: "We offer you a 10-days rent-free stay in the company of our Anton.
@@ -126,4 +159,12 @@ offer4  = Offer.new(
   Our comfy two storey home has all the luxury you could wish for and some big ant hills in the garden.
   Before you contact us, make sure you are not afraid of insects." , pet: "anteater", address: "Ameisenweg 4, 13589 Berlin", start_date: "20.12.2022", end_date: "30.12.2022")
 
+file20 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035912/sitpet4bed/offer4%20user8%20Ms.Antler%20with%20anteater%20Anton/51404659219_0c55b8e9b6_b_juxehh.jpg")
+file21 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662037899/sitpet4bed/offer4%20user8%20Ms.Antler%20with%20anteater%20Anton/4776001255_cbafd69cec_b_hmj51j.jpg")
+file22 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1661960394/sitpet4bed/offer4%20user8%20Ms.Antler%20with%20anteater%20Anton/anteater-log-Pantanal-Brazil-wetlands_txncs6.jpg")
+
+offer4.photos.attach(io: file20, filename: "Anteater-flat.jpg", content_type: "image/png")
+offer4.photos.attach(io: file21, filename: "Anteater-anthill.jpg", content_type: "image/png")
+offer4.photos.attach(io: file22, filename: "Anton from Anteater-flat.jpg", content_type: "image/png")
+offer4.save
 #   puts "Offers Created" =end
