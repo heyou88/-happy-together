@@ -3,7 +3,8 @@ color: #08799C
 }
 
 .book-button {
-position: relative;
-bottom: 0;
-top: 100 px;
+height: 120px;
+display: flex;
+justify-content: center;
+align-items: center;
 }

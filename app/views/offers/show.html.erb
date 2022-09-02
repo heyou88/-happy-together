@@ -2,35 +2,35 @@
 <div class="container home-page">
   <div class="row justify-content-center">
     <div class="col-12">
-          <div class="image-block">
-            <%= image_tag("Icon.png", :alt => "logo") %>
-          </div>
+      <div class="image-block">
+        <%= image_tag("Icon.png", :alt => "logo") %>
+      </div>
       <div class="text-wrap text-box" style="width: 280px">
-          <h4><%= @offer.title %></h2>
-          <p><%= @offer.description %></p>
+        <h4><%= @offer.title %></h2>
+        <p><%= @offer.description %></p>
       </div>
-          <div class= "book-button">
-            <%= link_to "book", offers_path, class: "btn btn-main" %>
-          </div>
       <div>
-          <div class="card-product">
-            <img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-              <div class="card-product-infos">
-              <strong><%= @offer.pet %></strong>
-              <%= image_tag "cat_img.png", class: "cat_img"%>
-              </div>
+        <div class="card-product">
+          <img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <strong><%= @offer.pet %></strong>
+            <%= image_tag "cat_img.png", class: "cat_img"%>
           </div>
-          <div class="card-product">
-            <img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-              <div class="card-product-infos">
-              <strong><%= @offer.pet %></strong>
-              <%= image_tag "cat_img.png", class: "cat_img"%>
-              </div>
-          </div>
-          <div  class="mb-0">
-            <%= link_to "back to all offers", offers_path%>
-          </div>
+        </div>
+        <div class="card-product">
+          <img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+          <strong><%= @offer.pet %></strong>
+          <%= image_tag "cat_img.png", class: "cat_img"%>
+        </div>
+        </div>
+        <div  class="mb-0">
+          <%= link_to "back to all offers", offers_path%>
+        </div>
       </div>
+        <div class= "book-button">
+          <%= link_to "book", offers_path, class: "btn btn-main" %>
+        </div>
     </div>
   </div>
 </div>
