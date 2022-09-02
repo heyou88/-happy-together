@@ -7,9 +7,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  position: relative;
+  border: 2px;
+  border-style: solid;
+  border-color: #08799C;
 }
 
-.card-product img {
+.main-card-img {
   height: 100%;
   width: 120px;
   object-fit: cover;
@@ -39,4 +43,14 @@
 
 .link{
   text-decoration: none;
+}
+
+.cat_img{
+  /* Icon */
+
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 76px;
+  right: 0px;
 }

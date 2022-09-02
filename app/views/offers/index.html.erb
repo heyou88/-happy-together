@@ -9,9 +9,10 @@
       <% @offers.each do |offer| %>
       <%= link_to offer_path(offer) , class:"link" do %>
         <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <div class="card-product-infos">
             <strong><%= offer.title %></strong>
+            <%= image_tag "cat_img.png", class: "cat_img"%>
           </div>
         </div>
         <% end %>
