@@ -11,7 +11,6 @@ User.destroy_all
 require "open-uri"
 
 
-
 user1 = User.new(
   email: "peter.wolf@gmail.com", first_name: "Peter" , last_name: "Wolf", user_name: "petcare-pete", password: "123456")
 pic_user1 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662039687/sitpet4bed/Petsitter%20User1%20peter%20wolf/Dog-Beach-Man-Sand-Friends-Glasses-Vacation-6758289_cesdrt.jpg"
