@@ -21,7 +21,7 @@ user1.save
 user2 = User.new(
   email: "chris.cuddler@gmail.com", first_name: "Chris", last_name: "Cuddler", user_name: "kitten-X", password: "123456")
 pic_user2 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662038609/sitpet4bed/Petsitter%20User2%20Chris%20Cuddler/Man_with_a_Cat_on_his_head_-_Manhattan__286179412197_29_grnqvz.jpg"
-file2 = URI.open(pic_user3)
+file2 = URI.open(pic_user2)
 user2.photo.attach(io: file2, filename: "Chris_Cuddler.jpg", content_type: "image/png")
 user2.save
 
@@ -78,14 +78,14 @@ user8.save
 
 
 user9 = User.new(
-email: "giorgina.vasari@gmail.com", first_name: "Giorgina", last_name: "Vasari", user_name: "medici", password: "123456")
+  email: "giorgina.vasari@gmail.com", first_name: "Giorgina", last_name: "Vasari", user_name: "medici", password: "123456")
 pic_user9 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662111029/sitpet4bed/offer2%20user9%20lively%20dalmatiner/2484px-Woman_redhead_natural_portrait_1_xkoifh.jpg"
 file9 = URI.open(pic_user9)
 user9.photo.attach(io: file9, filename: "Georgina_Vasari.jpg", content_type: "image/png")
 user9.save
 
 user10 = User.new(
-email: "sandra.sitwell@gmail.com", first_name: "Sandra", last_name: "Sitwell", user_name: "sitting-dame", password: "123456")
+  email: "sandra.sitwell@gmail.com", first_name: "Sandra", last_name: "Sitwell", user_name: "sitting-dame", password: "123456")
 pic_user10 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662114941/sitpet4bed/user10%20Sandra%20Sitwell%20British%20Shorthair/British_20Shorthair.1_p5myhu.jpg"
 file10 = URI.open(pic_user10)
 user10.photo.attach(io: file10, filename: "Sandra_Sitwell.jpg", content_type: "image/png")
@@ -105,10 +105,10 @@ the time. She is super cuddly and needs a lot of attention.", pet:"British Short
 file11 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662036109/sitpet4bed/user10%20Sandra%20Sitwell%20British%20Shorthair/2315705263_31d3aa21ba_c_g7n9od.jpg")
 file12 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035893/sitpet4bed/user10%20Sandra%20Sitwell%20British%20Shorthair/New_Orleans_June_07_-_Living_Room_tgplnu.jpg")
 file13 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035284/sitpet4bed/user10%20Sandra%20Sitwell%20British%20Shorthair/Female_British_Shorthair_cat_ayoi1i.jpg")
-offer1.photos.attach(io: file11, filename: "Kreuzberg-flat.jpg", content_type: "image/png")
-offer1.photos.attach(io: file12, filename: "Kreuzberg-flat 2.jpg", content_type: "image/png")
-offer1.photos.attach(io: file13, filename: "Mina from Kreuzberg-flat.jpg", content_type: "image/png")
-offer1.save
+offer1.photos.attach(io: file11, filename: "Kreuzberg-flat.jpg", content_type: "image/jpg")
+offer1.photos.attach(io: file12, filename: "Kreuzberg-flat 2.jpg", content_type: "image/jpg")
+offer1.photos.attach(io: file13, filename: "Mina from Kreuzberg-flat.jpg", content_type: "image/jpg")
+offer1.save!
 
 
 
@@ -129,7 +129,7 @@ offer2.photos.attach(io: file14, filename: "Dalmatiner-flat.jpg", content_type: 
 offer2.photos.attach(io: file15, filename: "Dalmatiner-flat2.jpg", content_type: "image/png")
 offer2.photos.attach(io: file16, filename: "Daisy from Dalmatiner-flat.jpg", content_type: "image/png")
 
-offer2.save
+offer2.save!
 
 
 offer3  = Offer.new(
@@ -146,7 +146,7 @@ file19 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035176
 offer3.photos.attach(io: file17, filename: "Parrot-flat.jpg", content_type: "image/png")
 offer3.photos.attach(io: file18, filename: "Parrot-flat2.jpg", content_type: "image/png")
 offer3.photos.attach(io: file19, filename: "Fridolin from Parrot-flat.jpg", content_type: "image/png")
-offer3.save
+offer3.save!
 
 
 
@@ -165,5 +165,6 @@ file22 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1661960394
 offer4.photos.attach(io: file20, filename: "Anteater-flat.jpg", content_type: "image/png")
 offer4.photos.attach(io: file21, filename: "Anteater-anthill.jpg", content_type: "image/png")
 offer4.photos.attach(io: file22, filename: "Anton from Anteater-flat.jpg", content_type: "image/png")
-offer4.save
-#   puts "Offers Created" =end
+offer4.save!
+
+puts "Offers Created"
