@@ -3,10 +3,15 @@ Rails.application.routes.draw do
   root to: "pages#home"
   put '/booking/:id', to: 'bookings#update', as: :booking
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :chatrooms, only: [:show, :index] do
+  resources :chatrooms, only: [:show, :index, :create] do
    resources :messages, only: :create
   end
 
-  resources :offers
+  # resources :users do
+  #   resources :bookings, only: [:index, :new, :create]
+  # end
 
+  get "profile", to: "pages#profile"
+
+  resources :offers
 end
