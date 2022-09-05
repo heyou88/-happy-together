@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def home
     @disable_nav = true
   end
+
+  def profile
+    @user
+  end
 end
