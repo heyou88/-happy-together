@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row justify-content-center">
+      <div  class="col-12">
+        <h1> my profile </h1>
+        <div>
+          <h2> username </h2>
+          <%= @user.user_name %>
+        </div>
+        <div>
+          <% if @user.photo.attached? %>
+                <%= cl_image_tag @user.photo.key, class:"profile" %>
+          <% end %>
+        </div>
+        <div>
+        <% if @user == current_user %>
+          <h1> my bookings </div>
+          <%= @user.bookings %>
+        <% end %>
+        </div>
+        <div>
+        <%= button_to "Log out", destroy_user_session_path, method: :delete %>
+        </div>
+      </div>
+  </div>
+</div>
