@@ -1,4 +1,4 @@
-<div class="container chatroom"
+<div class="container chatroom message_navbar"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
 >
@@ -19,6 +19,7 @@
     placeholder: "Message ##{@chatroom.name}",
     wrapper_html: {class: "flex-grow-1"}
   %>
-  <%= f.submit "Send", class: "btn btn-primary mb-3" %>
-  <%= link_to "Confirm Booking", booking_path, class: "btn btn-success mb-3" %>
+  <%= f.submit "" do %>
+  <%= image_tag "send_icon.svg"%>
+  <% end %>
 <% end %>
