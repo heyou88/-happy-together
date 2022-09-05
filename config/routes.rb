@@ -7,6 +7,11 @@ Rails.application.routes.draw do
    resources :messages, only: :create
   end
 
-  resources :offers
+  # resources :users do
+  #   resources :bookings, only: [:index, :new, :create]
+  # end
 
+  get "profile", to: "pages#profile"
+
+  resources :offers
 end
