@@ -29,7 +29,7 @@
         </div>
       </div>
         <div class= "book-button">
-          <%= link_to "book", offers_path, class: "btn btn-main" %>
+          <%= link_to "book", chatrooms_path(user_pet_owner: @offer.user), data: { "turbo-method": :post }, class: "btn btn-main" %>
         </div>
     </div>
   </div>
