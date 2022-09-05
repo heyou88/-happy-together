@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   #   resources :bookings, only: [:index, :new, :create]
   # end
 
-  get "profile", to: "pages#profile"
+  get "profiles/users/:id", to: "pages#profile"
 
   resources :offers
 end
