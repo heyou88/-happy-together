@@ -8,8 +8,9 @@
 @import "search-form-offers";
 @import "text_box";
 @import "image";
+@import "icons";
 @import "message_navbar";
-@import "profile_image";
+@import "profile";
 
 @import "chat";
 
@@ -19,4 +20,8 @@
 
 .background-special-color{
   background-color: #08799C;
+}
+
+.h1, h2{
+  color:  #08799C;
 }

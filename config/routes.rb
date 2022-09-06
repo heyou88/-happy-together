@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  put '/booking/:id', to: 'bookings#update', as: :booking
+  put '/booking/:id', to: 'bookings#update'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :chatrooms, only: [:show, :index, :create] do
    resources :messages, only: :create
@@ -11,9 +11,11 @@ Rails.application.routes.draw do
   #   resources :bookings, only: [:index, :new, :create]
   # end
 
-  get "profile", to: "pages#profile"
+
   get "pending", to: "bookings#pending"
   get "confirm", to: "bookings#confirm"
+  get "profiles/users/:id", to: "pages#profile", as: :profile
+
 
   resources :offers
 end

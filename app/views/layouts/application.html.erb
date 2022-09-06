@@ -11,8 +11,10 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" unless @disable_nav %>
     <%= render "shared/flashes" %>
-    <%= yield %>
+    <div style="padding-bottom: 90px" >
+      <%= yield %>
+    </div>
+    <%= render "shared/navbar" unless @disable_nav %>
   </body>
 </html>

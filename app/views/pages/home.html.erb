@@ -16,10 +16,16 @@
     <div class="mt-4">
         <%= link_to "start",   offers_path, class: "-main" %>
     </div>
+    <% if user_signed_in? %>
+    <div class="log-in">
+        <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-ghost" %>
+    </div>
+    <% else %>
     <div class="log-in">
         <%= link_to "login",   new_user_session_path, class: "btn btn-ghost" %>
-        <%= link_to "don't have an account? Sign up",  new_user_registration_path,  class: "signup-link" %>
+        <%#= link_to "don't have an account? Sign up",  new_user_registration_path,  class: "signup-link" %>
     </div>
 
+    <% end %>
   </div>
 </div>
