@@ -1,17 +1,29 @@
 <div>
   <nav class="mobile-nav">
-        <a href="/offers" class="bloc-icon">
+        <%# <a href="/offers" class="bloc-icon">
             <img src="https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662384877/sitpet4bed/Navbar-Icons/home_wu6qks.png">
-        </a>
-        <a href="/map" class="bloc-icon">
+        </a> %>
+        <%= link_to offers_path do %>
+            <%= image_tag "home.png", class: "bloc-icon" %>
+        <% end %>
+        <%# <a href="/map" class="bloc-icon">
             <img src="https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662384877/sitpet4bed/Navbar-Icons/vector_im8qmc.png" alt="">
-        </a>
+        </a> %>
+        <%= link_to offers_path do %>
+            <%= image_tag "vector.png", class: "bloc-icon" %>
+        <% end %>
         <%#= link_to user_profile_path(current_user) cl_image_tag() %>
-        <a href="/profiles/users/id" class="bloc-icon">
+        <%# <a href="/profiles/users/id" class="bloc-icon">
             <img src="https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662384877/sitpet4bed/Navbar-Icons/user_mbdipt.png" alt="">
-        </a>
-        <a href="/messages" class="bloc-icon">
+        </a> %>
+        <%= link_to offers_path do %>
+            <%= image_tag "user.png", class: "bloc-icon" %>
+        <% end %>
+        <%# <a href="/messages" class="bloc-icon">
             <img src="https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662384877/sitpet4bed/Navbar-Icons/messenger_gxfp3j.png" alt="">
-        </a>
+        </a> %>
+        <%= link_to offers_path do %>
+            <%= image_tag "messenger.png", class: "bloc-icon" %>
+        <% end %>
   </nav>
 </div>
