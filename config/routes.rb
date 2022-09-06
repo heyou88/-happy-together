@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   # end
 
   get "profile", to: "pages#profile"
+  get "pending", to: "bookings#pending"
+  get "confirm", to: "bookings#confirm"
 
   resources :offers
 end
