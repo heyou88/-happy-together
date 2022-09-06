@@ -3,6 +3,18 @@ class OffersController < ApplicationController
     @offers = Offer.all
   end
 
+  def map
+    @offers = Offer.geocoded
+    @markers = @offers.geocoded.map do |offer|
+      {
+        lat: offer.latitude,
+        lng: offer.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {offer: offer}),
+        image_url: helpers.asset_url("REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS")
+      }
+    end
+  end
+
   def show
     @offer = Offer.find(params[:id])
   end
