@@ -9,7 +9,8 @@
       <% @offers.each do |offer| %>
       <%= link_to offer_path(offer) , class:"link" do %>
         <div class="card-product">
-        <%# <%=img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg"%>
+        <%# <%=img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" %>
+
 
           <% if offer.photos.attached? %>
             <%= cl_image_tag offer.photos.last.key, class: "main-card-img" %>
@@ -17,7 +18,7 @@
 
           <div class="card-product-infos">
             <strong><%= offer.title %></strong>
-            <%# <%= image_tag "cat_img.png", class: "cat_img"%>
+            <%# <%= image_tag "cat_img.png", class: "cat_img" %>
             <%# <%= image_tag "calendar_img.png" class: %>
           <div class="neighborhood">
             <i class="fa-solid fa-location-dot"></i>
@@ -25,9 +26,8 @@
           </div>
           <div class="booking_date">
             <i class="fa-regular fa-calendar-days custom-icon-style"></i>
-            <%= offer.start_date %>
-            ->
-            <%= offer.end_date %>
+            <%= offer.start_date.strftime("%d.%m. -") %>
+            <%= offer.end_date.strftime("%d.%m.%Y") %>
           </div>
           </div>
         </div>
@@ -35,9 +35,12 @@
       <% end %>
     </div>
   </div>
-    <div class="row justify-content-center">
-      <div class="col-8S">
+
+    <%# <div class="row justify-content-center"> %>
+      <%# <div class="col-8S"> %>
       <%#= link_to "create offer", new_offer_path, class: "btn btn-main"%>
-    </div>
+    <%# </div> %>
+  <%# </div> %>
+  <div style="height: 80px">
   </div>
 </div>
