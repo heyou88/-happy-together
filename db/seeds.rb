@@ -63,7 +63,10 @@ user6.save
 
 
 user7 = User.new(
-  email: "lydia.locksmith@gmail.com", first_name: "Lydia", last_name: "Locksmith", user_name: "silent-lydia", password: "123456", user_description: "")
+  email: "lydia.locksmith@gmail.com", first_name: "Lydia", last_name: "Locksmith", user_name: "silent-lydia", password: "123456",
+  user_description: "‘Be it pets or girls or boys - make Lydia your choice.
+  Make sure your pets are fine - while you're  having a jolly good time.’
+  ")
 pic_user7 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662039949/sitpet4bed/Petsitter%20User7%20Lydia%20Locksmith/47055535804_daea4cdfdf_b_afmeet.jpg"
 file7 = URI.open(pic_user7)
 user7.photo.attach(io: file7, filename: "Lydia_Locksmith.jpg", content_type: "image/png")
@@ -101,7 +104,7 @@ experienced petsitter for the whole month of October.
 We live in a beautiful 2-room apartment in Kreuzberg.
 It is very sunny with a balcony. Mina is a British
 short hair and is used to stay indoors all
-the time. She is super cuddly and needs a lot of attention.", pet:"British Shorthair cat", address: "Katzbachstraße 3, 10965 Berlin", neighborhood: "Kreuzberg", start_date:	"01.10.2022", end_date:	"31.10.2022")
+the time. She is super cuddly and needs a lot of attention.", pet:"British Shorthair cat", pet_name:"Mina", pet_description: "She's a sunshine, cuddle her as often as possible", address: "Katzbachstraße 3, 10965 Berlin", neighborhood: "Kreuzberg", start_date:	"01.10.2022", end_date:	"31.10.2022")
 
 file11 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662036109/sitpet4bed/user10%20Sandra%20Sitwell%20British%20Shorthair/2315705263_31d3aa21ba_c_g7n9od.jpg")
 file12 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035893/sitpet4bed/user10%20Sandra%20Sitwell%20British%20Shorthair/New_Orleans_June_07_-_Living_Room_tgplnu.jpg")
@@ -120,7 +123,7 @@ offer2  = Offer.new(
   that needs lots of running and playing, while we are away for a couple of days in the beginning of November.
   We live in a beautiful area with lots of parks and woods in the surrounding area.
   The house we are offering has 300 square meters and a garden with a lot of other animals that come over to visit and play with Daisy.
-  Physical fitness and some conflict solving experience on your side might come handy", pet: "Dalmatiner", address: "Hundekehlestraße 3, 14199 Berlin", neighborhood: "Schmargendorf",start_date: "01.11.2022", end_date: "05.11.2022")
+  Physical fitness and some conflict solving experience on your side might come handy", pet: "Dalmatiner", pet_name: "Daisy", pet_description: "Strong-willed but good-hearted, likes to stroll around", address: "Hundekehlestraße 3, 14199 Berlin", neighborhood: "Schmargendorf",start_date: "01.11.2022", end_date: "05.11.2022")
 
 file14 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662036096/sitpet4bed/offer2%20user9%20lively%20dalmatiner/Living_Room_vjveow.jpg")
 file15 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035885/sitpet4bed/offer2%20user9%20lively%20dalmatiner/9574629559_5b8d0a924f_nfjcdh.jpg")
@@ -139,7 +142,7 @@ offer3  = Offer.new(
   He is a really attentive and funny creature that needs a lot of attention.
   You should have a great sense of humor and a lot of tolerance for insults.
   We offer you to live in a very beautiful and quiet ground floor apartment in Papageienviertel for 2 whole months.
-  Please contact us, so we can get to know each other.", pet: "parrot", address: "Eisvogelweg 3, 14169 Berlin", neighborhood: "Zehlendorf", start_date: "15.10.2022", end_date: "14.12.2022")
+  Please contact us, so we can get to know each other.", pet: "parrot", pet_name: "Fridolin", pet_description: "he loves a funny conversation & goofy noises.", address: "Eisvogelweg 3, 14169 Berlin", neighborhood: "Zehlendorf", start_date: "15.10.2022", end_date: "14.12.2022")
 file17 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662038261/sitpet4bed/offer3%20user5%20Mr.%20Rubin%20with%20a%20parrot/Living_room_-pet_parrot_-cage-8a_tsyd5i.jpg")
 file18 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662118435/sitpet4bed/offer3%20user5%20Mr.%20Rubin%20with%20a%20parrot/Eclectic-living-room-with-a-bird-cage-lighting-option_hebanf.jpg")
 file19 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035176/sitpet4bed/offer3%20user5%20Mr.%20Rubin%20with%20a%20parrot/27805754320_9060952d22_b_dln4fo.jpg")
@@ -157,7 +160,7 @@ offer4  = Offer.new(
   user: user8, title: "Anteater needs a pet sitter", description: "We offer you a 10-days rent-free stay in the company of our Anton.
   He is a special kind of pet, so you should be prepared to adapt to his habits and needs.
   Our comfy two storey home has all the luxury you could wish for and some big ant hills in the garden.
-  Before you contact us, make sure you are not afraid of insects.", pet: "anteater", address: "Ameisenweg 4, 13589 Berlin", neighborhood: "Spandau", start_date: Date.new(2022,12,20), end_date: Date.new(2022,12,30))
+  Before you contact us, make sure you are not afraid of insects.", pet: "anteater", pet_name: "Anton", pet_description: "He has his ways but super-cute and always good fun ", address: "Ameisenweg 4, 13589 Berlin", neighborhood: "Spandau", start_date: Date.new(2022,12,20), end_date: Date.new(2022,12,30))
 
 file20 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035912/sitpet4bed/offer4%20user8%20Ms.Antler%20with%20anteater%20Anton/51404659219_0c55b8e9b6_b_juxehh.jpg")
 file21 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662037899/sitpet4bed/offer4%20user8%20Ms.Antler%20with%20anteater%20Anton/4776001255_cbafd69cec_b_hmj51j.jpg")

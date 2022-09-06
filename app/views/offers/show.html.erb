@@ -1,35 +1,47 @@
 
 <div class="container home-page">
   <div class="row justify-content-center">
-    <div class="col-12">
+    <%# <div class="col-12"> %>
       <div class="image-block">
-        <%= image_tag("Icon.png", :alt => "logo") %>
+        <% if @offer.photos.attached? %>
+          <%= cl_image_tag @offer.photos.first.key, class: "main-card-img" %>
+          <%= cl_image_tag @offer.photos.second.key, class: "main-card-img" %>
+        <% end %>
       </div>
-      <div class="text-wrap text-box" style="width: 280px">
-        <h4><%= @offer.title %></h2>
+      <div class="text-content" style="background-color: white; padding: 50px">
+        <h4><%= @offer.title %></h4>
         <p><%= @offer.description %></p>
+        <p><%= @offer.address %></p>
       </div>
-      <div>
+      <div class=show-page-animal-block
+    >
         <div class="card-product">
-          <img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <%# <img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> %>
+          <% if @offer.photos.attached? %>
+            <%= cl_image_tag @offer.photos.last.key, class: "main-card-img" %>
+          <% end %>
+
           <div class="card-product-infos">
             <strong><%= @offer.pet %></strong>
-            <%= image_tag "cat_img.png", class: "cat_img"%>
+            <strong><%= @offer.pet_name %></strong>
+            <p><%= @offer.pet_description %></p>
+            <%# <%= image_tag "cat_img.png", class: "cat_img"%>
+
           </div>
         </div>
-        <div class="card-product">
+        <%# <div class="card-product">
           <img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
           <div class="card-product-infos">
-          <strong><%= @offer.pet %></strong>
-          <%= image_tag "cat_img.png", class: "cat_img"%>
-        </div>
+          <%# <strong><%= @offer.pet %></strong>
+          <%# <%= image_tag "cat_img.png", class: "cat_img"%>
+        <%# </div> %>
         </div>
         <div  class="mb-0">
           <%= link_to "back to all offers", offers_path%>
         </div>
       </div>
         <div class= "book-button">
-          <%= link_to "book", chatrooms_path(user_pet_owner: @offer.user), data: { "turbo-method": :post }, class: "btn btn-main" %>
+          <%= link_to "book", chatrooms_path(user_pet_owner: @offer.user, offer: @offer), data: { "turbo-method": :post }, class: "btn btn-main" %>
         </div>
     </div>
   </div>

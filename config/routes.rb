@@ -11,8 +11,15 @@ Rails.application.routes.draw do
   #   resources :bookings, only: [:index, :new, :create]
   # end
 
+
+  get "pending", to: "bookings#pending"
+  get "confirm", to: "bookings#confirm"
   get "profiles/users/:id", to: "pages#profile", as: :profile
 
+<<<<<<< HEAD
   get "map", to: "offers#map"
+=======
+
+>>>>>>> master
   resources :offers
 end
