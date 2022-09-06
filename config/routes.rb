@@ -13,5 +13,6 @@ Rails.application.routes.draw do
 
   get "profiles/users/:id", to: "pages#profile", as: :profile
 
+  get "map", to: "offers#map"
   resources :offers
 end

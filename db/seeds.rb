@@ -171,7 +171,7 @@ offer4.save!
 puts "Offers Created"
 
 booking = Booking.new()
-booking.user = user1
+booking.user = user7
 booking.offer = offer1
 booking.save
 

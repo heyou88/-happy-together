@@ -15,4 +15,8 @@ class PagesController < ApplicationController
     @user = User.find(params[:id])
     @bookings = @user.bookings
   end
+
+  def map
+
+  end
 end
