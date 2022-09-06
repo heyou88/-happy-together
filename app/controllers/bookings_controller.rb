@@ -22,4 +22,20 @@ class BookingsController < ApplicationController
     @booking.save
     redirect_to offers_path, notice: "Booking was successfully create"
   end
+
+  def pending
+    chatroom = Chatroom.find(params[:chatroom])
+    booking = Booking.find(params[:booking])
+    booking.status = "pending"
+    booking.save
+    redirect_to chatroom_path(chatroom)
+  end
+
+  def confirm
+    chatroom = Chatroom.find(params[:chatroom])
+    booking = Booking.find(params[:booking])
+    booking.status = "confirmed"
+    booking.save
+    redirect_to chatroom_path(chatroom)
+  end
 end
