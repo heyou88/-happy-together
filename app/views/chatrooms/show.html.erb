@@ -22,7 +22,6 @@
     placeholder: "Message ##{@chatroom.name}",
     wrapper_html: {class: "flex-grow-1"}
   %>
-  <%= button_tag type: "submit" do %>
-  <%= image_tag "send_icon.svg"%>
-  <% end %>
+  <%= f.submit "Send", class: "btn btn-primary mb-3 button_send" class: "width: 270px;"%>
+
 <% end %>
