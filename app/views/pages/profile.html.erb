@@ -5,6 +5,7 @@
         <div>
           <h2> username </h2>
           <%= @user.user_name %>
+          <%#= @user.description %>
         </div>
         <div>
           <% if @user.photo.attached? %>
@@ -13,9 +14,17 @@
         </div>
         <div>
         <% if @user == current_user %>
-          <h1> my bookings </div>
-          <%= @user.bookings %>
-        <% end %>
+            <h1> my bookings </div>
+
+            <% @user.bookings.each do |booking| %>
+              <div class="card-product">
+                  <%= link_to offer_path(booking.offer) , class:"link" %>
+                  <% if booking.offer.photos.attached? %>
+                  <%= cl_image_tag booking.offer.photos.last.key, class: "main-card-img" %>
+              </div>
+              <% end %>
+            <% end %>
+          <% end %>
         </div>
         <div>
         <%= button_to "Log out", destroy_user_session_path, method: :delete %>

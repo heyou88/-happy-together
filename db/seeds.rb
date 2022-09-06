@@ -168,3 +168,10 @@ offer4.photos.attach(io: file22, filename: "Anton from Anteater-flat.jpg", conte
 offer4.save!
 
 puts "Offers Created"
+
+booking = Booking.new()
+booking.user = user1
+booking.offer = offer1
+booking.save
+
+puts "Bookings Created"
