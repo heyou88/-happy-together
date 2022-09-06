@@ -14,13 +14,22 @@
         </div>
         <div>
         <% if @user == current_user %>
-            <h1> my bookings </div>
-
+            <h1> my bookings
+        </div>
             <% @user.bookings.each do |booking| %>
+                <%= link_to  offer_path(booking.offer) , class:"link" do %>
               <div class="card-product">
-                  <%= link_to offer_path(booking.offer) , class:"link" %>
                   <% if booking.offer.photos.attached? %>
                   <%= cl_image_tag booking.offer.photos.last.key, class: "main-card-img" %>
+                  <% end %>
+                  <div class="card-product-infos">
+                      <strong><%= booking.offer.title %></strong>
+                      <%= image_tag "cat_img.png", class: "cat_img"%>
+                      <div class="booking_date">
+                        <%= booking.offer.start_date%>
+                        <%= booking.offer.end_date %>
+                      </div>
+                  </div>
               </div>
               <% end %>
             <% end %>
