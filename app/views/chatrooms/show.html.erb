@@ -1,8 +1,11 @@
-<div class="container chatroom message_navbar"
+<div class="container chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
 >
-  <h1>#<%= @chatroom.name %></h1>
+  <div class= "message_navbar">
+   <%= link_to  image_tag "back_icon.png" %>
+  <h1><%= @chatroom.flat_owner.user_name %></h1>
+  </div>
 
   <div class="messages" data-chatroom-subscription-target="messages">
   <div class="messages">
@@ -19,7 +22,7 @@
     placeholder: "Message ##{@chatroom.name}",
     wrapper_html: {class: "flex-grow-1"}
   %>
-  <%= f.submit "" do %>
+  <%= button_tag type: "submit" do %>
   <%= image_tag "send_icon.svg"%>
   <% end %>
 <% end %>
