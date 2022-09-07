@@ -17,7 +17,7 @@
 
             <img src="https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662384877/sitpet4bed/Navbar-Icons/user_mbdipt.png" alt="">
         </a> %>
-        <%= link_to profile(current_user)_path do %>
+        <%= link_to profile_path(current_user) do %>
             <%= image_tag "user.png", class: "bloc-icon" %>
         <% end %>
         <%# <a href="/messages" class="bloc-icon">
