@@ -4,4 +4,16 @@
   align-items: center;
 
   border-radius: 10px;
+
+  img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s;
+  }
+
+  img:hover {
+transform: scale(1.5);
+transition: transform .3s;
+  }
 }

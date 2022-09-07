@@ -1,4 +1,5 @@
-<div class="container chatroom"
+
+<div class="chatroom" style="background-color: white;"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
@@ -19,7 +20,7 @@
     <% end %>
   </div>
 </div>
-<div class="wrapper">
+<div class="wrapper" style="background-color: white;">
   <div id="footer-goes-here">
     <% if current_user == @chatroom.flat_owner %>
      <% if @chatroom.booking.status == nil %>
