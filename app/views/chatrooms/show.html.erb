@@ -1,6 +1,7 @@
-<div class="chatroom"
+<div class="container chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+  data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
 >
   <div class= "message_navbar">
    <%= link_to image_tag "back_icon.png" %>
@@ -10,7 +11,11 @@
   <div class="container messages" data-chatroom-subscription-target="messages">
   <div class="messages">
     <% @chatroom.messages.each do |message| %>
-      <%= render "messages/message", message: message %>
+    <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+      <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+       <%= render "messages/message", message: message %>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>
@@ -43,7 +48,7 @@
         wrapper_html: {class: "flex-grow-1"}
       %>
       <div>
-        <%= f.submit ">", class: "btn btn-primary mb-3 button_send"%>
+        <%= f.submit ">", class: "btn btn-primary mb-3 button_send" %>
       </div>
     <% end %>
   </div>
