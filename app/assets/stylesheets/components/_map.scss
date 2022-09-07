@@ -1,8 +1,96 @@
 .mapboxgl-popup {
   max-width: 200px;
+  position: absolute;
+  height: 100%;
+  top:0;
+  left:0;
+  width: 100%;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
+
+.mapboxgl-popup {
+  position: absolute;
+  height: 100%;
+  top:0;
+  left:0;
+  width: 100%;
+}
+
+.map-pins {
+  position: absolute;
+  height: 100%;
+  top:0;
+  left:0;
+  width: 100%;
+}
+
+// .marker-costa-rica {
+//   left:17.5%;
+//   top: 50%;
+//   -webkit-animation-delay:.2s;
+//   animation-delay:.2s;
+// }
+
+
+// .map-location-marker {
+//   background: url(https://jeffbridgforth.com/codepen/map-pin.png) no-repeat;
+//   cursor: pointer;
+//   position: absolute;
+//   height: px-to-ems(30px);
+//   margin-top:px-to-ems(-30px);
+//   margin-left: px-to-ems(-11px,14px);
+//   width: px-to-ems(21px);
+//   z-index:3;
+//   // }
+// }
+
+// .map-location-marker:after {
+//   -webkit-animation: pulsate 2s ease-in-out infinite;
+//   -moz-animation: pulsate 2s ease-in-out infinite;
+//   animation: pulsate 2s ease-in-out infinite;
+//   background: transparent;
+//   border: 2px solid $color-white;
+//   border-radius: 30px;
+//   content: "";
+//   display: block;
+//   height: 31px;
+//   left: -7px;
+//   opacity: 0;
+//   position: absolute;
+//   top: -8px;
+//   -webkit-transition: all .25s linear;
+//   -moz-transition: all .25s linear;
+//   -o-transition: all .25s linear;
+//   transition: all .25s linear;
+//   width: 31px;
+//   z-index: 2;
+// }
+
+// #page-places {
+// position: relative;
+// }
+// #map-info {
+// background: $color-black;
+// color: $color-white;
+// position: absolute;
+// top:px-to-ems(-25px);
+// left:50%;
+// margin-left:px-to-ems(-125px);
+// padding:px-to-ems(18px);
+// width:px-to-ems(250px);
+// z-index:10;
+// .close-btn {
+//   background: url(http://jeffbridgforth.com/codepen//close-btn.png) no-repeat;
+//   cursor: pointer;
+//   display: block;
+//   height: px-to-ems(11px);
+//   width: px-to-ems(11px);
+//   position: absolute;
+//   right:px-to-ems(18px);
+//   top:px-to-ems(18px);
+// }
+// }
