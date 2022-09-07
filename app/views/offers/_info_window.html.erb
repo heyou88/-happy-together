@@ -1,2 +1,4 @@
-<h2><%= offer.title %></h2>
-<p><%= offer.address %></p>
+ <%= link_to offer_path(offer), class:"link" do %>
+  <p><%= offer.title %></p>
+  <p><%=  offer.address %></p>
+ <% end %>
