@@ -12,6 +12,14 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.mapboxgl-popup {
+  position: absolute;
+  height: 100%;
+  top:0;
+  left:0;
+  width: 100%;
+}
+
 .map-pins {
   position: absolute;
   height: 100%;
@@ -19,6 +27,15 @@
   left:0;
   width: 100%;
 }
+
+// .marker-costa-rica {
+//   left:17.5%;
+//   top: 50%;
+//   -webkit-animation-delay:.2s;
+//   animation-delay:.2s;
+// }
+
+
 // .map-location-marker {
 //   background: url(https://jeffbridgforth.com/codepen/map-pin.png) no-repeat;
 //   cursor: pointer;
@@ -28,13 +45,6 @@
 //   margin-left: px-to-ems(-11px,14px);
 //   width: px-to-ems(21px);
 //   z-index:3;
-//   // @media (min-width:$break-4) {
-//   //   .js & {
-//   //     visibility: hidden;
-//   //   }
-//   //   .js &.bounceInDown {
-//   //     visibility: visible;
-//   //   }
 //   // }
 // }
 
