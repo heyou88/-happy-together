@@ -1,38 +1,41 @@
 .mapboxgl-popup {
-  max-width: 200px;
-  position: absolute;
-  height: 100%;
-  top:0;
-  left:0;
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
   width: 100%;
-
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.4em;
+  background-color: #141414;
 }
 
-.info{
-  background: black;
-	color: white;
-	position: absolute;
-	top:px-to-ems(-25px);
-	left:50%;
-	margin-left:px-to-ems(-125px);
-	padding:px-to-ems(18px);
-	width:px-to-ems(250px);
-	z-index:10;
+// .mapboxgl-info{
+//   background: black;
+// 	color: white;
+// 	position: absolute;
+// 	top:px-to-ems(-25px);
+// 	left:50%;
+// 	margin-left:px-to-ems(-125px);
+// 	padding:px-to-ems(18px);
+// 	width:px-to-ems(250px);
+// 	z-index:10;
+// }
 
-}
+// .mapboxgl-popup-content {
+//   text-align: center;
+//   font-family: "Open Sans", sans-serif;
+// }
 
-.mapboxgl-popup-content {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-}
-
-.mapboxgl-pins {
-  position: absolute;
-  height: 100%;
-  top:0;
-  left:0;
-  width: 100%;
-}
+// .mapboxgl-pins {
+//   position: absolute;
+//   height: 100%;
+//   top:0;
+//   left:0;
+//   width: 100%;
+// }
 
 // .marker-costa-rica {
 //   left:17.5%;
