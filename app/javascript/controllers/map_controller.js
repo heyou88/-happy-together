@@ -51,18 +51,17 @@ export default class extends Controller {
         .addTo(this.map)
     })
 
-    #fitMapToMarkers() {
+  }
+  #fitMapToMarkers() {
       const bounds = new mapboxgl.LngLatBounds()
       this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
       this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
-}
-}
+  #setInputValue(event) {
+      this.addressTarget.value = event.result["place_name"]
+    }
 
-#setInputValue(event) {
-  this.addressTarget.value = event.result["place_name"]
-}
-
-#clearInputValue() {
-  this.addressTarget.value = ""
+    #clearInputValue() {
+      this.addressTarget.value = ""
+    }
 }
