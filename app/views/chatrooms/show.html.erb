@@ -1,8 +1,7 @@
-<div class="container chatroom"
+<div class="chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
->
   <div class= "message_navbar">
    <%= link_to image_tag "back_icon.png" %>
   <h1><%= @chatroom.flat_owner.user_name %></h1>
@@ -23,17 +22,17 @@
   <div id="footer-goes-here">
     <% if current_user == @chatroom.flat_owner %>
      <% if @chatroom.booking.status == nil %>
-       <%= link_to "Confirm Offer", pending_path(booking: @chatroom.booking, chatroom: @chatroom), method: :post, status: :see_other, class: "btn btn-primary btn-lg mb-3 button_Accept_Offer" %>
+       <%= link_to "Confirm Offer", pending_path(booking: @chatroom.booking, chatroom: @chatroom), method: :post, status: :see_other, class: "btn btn-warning btn-lg mb-3 button_Accept_Offer" %>
       <% else %>
-       <button type="button" disabled>Confirm Offer</button>
+       <button type="button" class="btn btn-warning btn-lg mb-3 button_Accept_Offer" disabled>Confirm Offer</button>
       <% end %>
     <% else %>
       <% if @chatroom.booking.status == nil %>
-       <button type="button" disabled>Accept Offer</button>
+       <button class="btn btn-warning btn-lg mb-3 button_Accept_Offer" type="button" disabled>Accept Offer</button>
       <% elsif @chatroom.booking.status == "pending" %>
-       <%= link_to "Accept Offer", confirm_path(booking: @chatroom.booking, chatroom: @chatroom), method: :post, status: :see_other, class: "btn btn-primary btn-lg mb-3 button_Accept_Offer" %>
+       <%= link_to "Accept Offer", confirm_path(booking: @chatroom.booking, chatroom: @chatroom), method: :post, status: :see_other, class: "btn btn-warning btn-lg mb-3 button_Accept_Offer" %>
       <% elsif @chatroom.booking.status == "confirmed" %>
-        <button type="button" disabled>Confirmed</button>
+        <button class="btn btn-warning btn-lg mb-3 button_Accept_Offer"type="button" disabled>Confirmed</button>
       <% end %>
     <% end %>
   </div>
