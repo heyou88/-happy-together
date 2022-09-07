@@ -5,6 +5,20 @@
   top:0;
   left:0;
   width: 100%;
+
+}
+
+.info{
+  background: black;
+	color: white;
+	position: absolute;
+	top:px-to-ems(-25px);
+	left:50%;
+	margin-left:px-to-ems(-125px);
+	padding:px-to-ems(18px);
+	width:px-to-ems(250px);
+	z-index:10;
+
 }
 
 .mapboxgl-popup-content {
@@ -12,15 +26,7 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.mapboxgl-popup {
-  position: absolute;
-  height: 100%;
-  top:0;
-  left:0;
-  width: 100%;
-}
-
-.map-pins {
+.mapboxgl-pins {
   position: absolute;
   height: 100%;
   top:0;
