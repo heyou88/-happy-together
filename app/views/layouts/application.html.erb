@@ -13,7 +13,7 @@
 
   <body>
     <%= render "shared/flashes" %>
-    <div style="padding-bottom: 90px" >
+    <div style=" <%= action_name == "home" ? "" : "padding-bottom: 65px" %>">
       <%= yield %>
     </div>
     <%= render "shared/navbar" unless @disable_nav %>
