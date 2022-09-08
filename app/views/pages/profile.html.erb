@@ -1,8 +1,8 @@
 <div class="wrapper">
     <div class= "profile-card">
-        <div class="profile-card__img">
+        <div class="profile-card-photo">
               <% if @user.photo.attached? %>
-                    <%= cl_image_tag @user.photo.key%>
+                    <%= cl_image_tag @user.photo.key, class:"photo"%>
               <% end %>
         </div>
         <div class="profile-card__cnt">
