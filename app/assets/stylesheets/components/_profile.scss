@@ -1,12 +1,78 @@
+.wrapper {
+  padding-top: 30px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+}
+
+.profile-card__cnt{
+  margin-top: -35px;
+  text-align: center;
+  padding: 0 20px;
+  padding-bottom: 40px;
+}
+
+.profile-card__name{
+  font-weight: 700;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.profile-card__description{
+  font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
 .profile {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-direction: column;
 }
+
+.profile-card{
+  min-height: 250px;
+  margin: auto;
+  box-shadow: 0px 8px 60px -10px
+  rgba(13,28,39,0.6);
+  background: white;
+  border: #08799C 1px solid;
+  border-radius: 12px;
+  width: 309px;
+  position: relative;
+  top: 50px;
+  border-bottom: 2px solid #08799C ;
+}
+.profile-card-photo{
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+  box-shadow: 0px 5px 50px 0px rgb(226, 225, 230), 0px 0px 0px 7px rgba(9, 9, 9, 0.5);
+}
+
+photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .profile-large {
   width: 80px;
   border-radius: 50%;
@@ -15,11 +81,27 @@
   width: 40px;
   border-radius: 50%;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
+  border: #FF9F1C 3px solid;
 }
 .profile-square {
   width: 40px;
   border-radius: 0px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
+  border: #FF9F1C 3px solid;
+}
+
+.show-page-profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 13px;
+  z-index: 1;
+  top: 220px;
+  opacity: 1;
+  box-shadow: 0 0 15px rgb(0, 0, 0);
+  object-fit: cover;
 }

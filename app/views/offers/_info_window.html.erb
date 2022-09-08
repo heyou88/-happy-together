@@ -1,6 +1,6 @@
- <div  class="map-pins">
- <%= link_to offer_path(offer), class:"link" do %>
+ <div class= "mapboxgl-popup">
+ <%= link_to offer_path(offer) do %>
   <p><%= offer.title %></p>
-  <p><%=  offer.address %></p>
+  <p><%= offer.address %></p>
  <% end %>
  </div>

@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="row justify-content-center">
       <div  class="col-12">
@@ -41,7 +42,55 @@
               <% end %>
               <% end %>
               <% end %>
+
+<div class="wrapper container">
+<div class="py-5">
+    <div class= "profile-card">
+        <div class="profile-card-photo">
+              <% if @user.photo.attached? %>
+                    <%= cl_image_tag @user.photo.key, class:"photo"%>
+              <% end %>
         </div>
-      </div>
-  </div>
+        <div class="profile-card__cnt">
+              <div class= "profile-card__name">
+                <%= @user.user_name %>
+              </div>
+              <div class= "profile-card__description">
+                <%= @user.user_description %>
+              </div>
+
+        </div>
+    </div>
+</div>
+        <div class= "">
+          <% if @user == current_user %>
+              <div class= "booking">
+                <h1> My Bookings </h1>
+              </div>
+                  <% @user.bookings.each do |booking| %>
+                      <%= link_to  offer_path(booking.offer) , class:"link" do %>
+                    <div class="card-product">
+                        <% if booking.offer.photos.attached? %>
+                          <%= cl_image_tag booking.offer.photos.last.key, class: "main-card-img" %>
+                        <% end %>
+                          <div class="card-product-infos">
+                            <strong><%= booking.offer.title %></strong>
+                                <%# <%= image_tag "cat_img.png", class: "cat_img" %>
+                                <%# <%= image_tag "calendar_img.png" class: %>
+                            <div class="neighborhood">
+                              <i class="fa-solid fa-location-dot"></i>
+                              <%= booking.offer.neighborhood %>
+                            </div>
+                            <div class="booking_date">
+                              <i class="fa-regular fa-calendar-days custom-icon-style"></i>
+                              <%= booking.offer.start_date.strftime("%d.%m. -") %>
+                              <%= booking.offer.end_date.strftime("%d.%m.%Y") %>
+                            </div>
+                          </div>
+                      </div>
+
+                    <% end %>
+                    <% end %>
+                    <% end %>
+          </div>
 </div>
