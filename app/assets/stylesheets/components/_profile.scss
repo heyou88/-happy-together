@@ -1,14 +1,10 @@
 .wrapper {
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-  padding: 91px 58px;
   padding-top: 30px;
+  padding-left: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background-color: #ECB390;
 
 }
 
@@ -48,7 +44,7 @@
   margin: auto;
   box-shadow: 0px 8px 60px -10px
   rgba(13,28,39,0.6);
-  background: #93CEE0;
+  background: white;
   border: #08799C 1px solid;
   border-radius: 12px;
   width: 309px;
