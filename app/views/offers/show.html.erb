@@ -1,44 +1,39 @@
-
 <div class="image-block-profile">
-<div>
   <div>
-    <% if @offer.photos.attached? %>
-
-      <div id="carouselExampleIndicators<%= @offer.id %>" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators<%= @offer.id %>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators<%= @offer.id %>" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <%= cl_image_tag @offer.photos.first.key, class: "d-block w-100", id: "offer-image" %>
-
+    <div>
+      <% if @offer.photos.attached? %>
+        <div id="carouselExampleIndicators<%= @offer.id %>" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators<%= @offer.id %>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators<%= @offer.id %>" data-bs-slide-to="1" aria-label="Slide 2"></button>
           </div>
-          <div class="carousel-item">
-            <%= cl_image_tag @offer.photos.second.key, class: "d-block w-100", id: "offer-image" %>
-
-          </div>
-
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <%= cl_image_tag @offer.photos.first.key, class: "d-block w-100", id: "offer-image" %>
+              </div>
+              <div class="carousel-item">
+                <%= cl_image_tag @offer.photos.second.key, class: "d-block w-100", id: "offer-image" %>
+              </div>
+            </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators<%= @offer.id %>" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators<%= @offer.id %>" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators<%= @offer.id %>" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators<%= @offer.id %>" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <%# <%= cl_image_tag @offer.photos.first.key %>
-      <%# <%= cl_image_tag @offer.photos.second.key %>
-    <% end %>
-  </div>
+        <%# <%= cl_image_tag @offer.photos.first.key %>
+        <%# <%= cl_image_tag @offer.photos.second.key %>
+      <% end %>
+    </div>
         <div>
           <%= link_to profile_path(@user) do %>
           <% if @user.photo.attached? %>
                 <%= cl_image_tag(@user.photo.key, gravity: :face, crop: :thumb, class:"show-page-profile", id: "avatar") %>
           <% end %>
-        <% end %>
+          <% end %>
         </div>
         </div>
   <div class="container">
@@ -48,11 +43,10 @@
         <p><%= @offer.description %></p>
         <p><%= @offer.user.user_name %></p>
       </div>
-      <div class=show-page-animal-block>
-      <div class="showpage-animal-header">
-    <h4> And this is our pet:</h4>
+      <div class="show-page-animal-block">
+        <div class="showpage-animal-header">
+      <h4 class="profile-card__name"> And this is our pet:</h4>
     </div>
-
         <div class="card-product">
           <%# <img class="main-card-img", src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> %>
           <% if @offer.photos.attached? %>
