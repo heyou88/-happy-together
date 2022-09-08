@@ -118,7 +118,7 @@ GEM
     erubi (1.11.0)
     execjs (2.8.1)
     ffi (1.15.5)
-    font-awesome-sass (6.1.2)
+    font-awesome-sass (6.2.0)
       sassc (~> 2.0)
     geocoder (1.8.0)
     globalid (1.0.0)
@@ -166,8 +166,6 @@ GEM
       timeout
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.8-arm64-darwin)
-      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -206,6 +204,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    redis (4.8.0)
     regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -274,7 +273,6 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-  arm64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
@@ -292,6 +290,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
+  redis (~> 4.0)
   sassc-rails
   selenium-webdriver
   simple_form!
