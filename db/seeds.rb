@@ -65,19 +65,19 @@ user6.save
 
 
 user7 = User.new(
-  email: "lydia.locksmith@gmail.com", first_name: "Lydia", last_name: "Locksmith", user_name: "silent-lydia", password: "123456",
-  user_description: "‘Be it pets or girls or boys - make Lydia your choice.
-  Make sure your pets are fine - while you're  having a jolly good time.’
+  email: "dirk.lucksmith@gmail.com", first_name: "Dirk", last_name: "Lucksmith", user_name: "cuddly-D", password: "123456",
+  user_description: " ‘Be it cat or dog or goose - if it’s cuddly-D you choose,
+  you’re sure the pets are fine - while you are having a jolly good time.’
   ")
-pic_user7 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662039949/sitpet4bed/Petsitter%20User7%20Lydia%20Locksmith/47055535804_daea4cdfdf_b_afmeet.jpg"
+pic_user7 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662636352/sitpet4bed/Petsitter%20User7%20Dirk%20Lucksmith/IMG_20220627_174616_jlktr2.jpg"
 file7 = URI.open(pic_user7)
-user7.photo.attach(io: file7, filename: "Lydia_Locksmith.jpg", content_type: "image/png")
+user7.photo.attach(io: file7, filename: "Dirk_Lucksmith", content_type: "image/png")
 user7.save
 
 
 user8 = User.new(
-  email: "ariana.antler@gmail.com", first_name: "Ariana", last_name: "Antler", user_name: "ari-ant", password: "123456", user_description: "")
-pic_user8 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662111867/sitpet4bed/offer4%20user8%20Ms.Antler%20with%20anteater%20Anton/Stef_Gaines_2019_x8o0gx.jpg"
+  email: "ariana.antler@gmail.com", first_name: "Ariana", last_name: "Antler", user_name: "ari-ant", password: "123456", user_description: "All the people I like are those that are dead.")
+pic_user8 = "https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662039949/sitpet4bed/offer4%20user8%20Ms.Antler%20with%20anteater%20Anton/47055535804_daea4cdfdf_b_afmeet.jpg"
 file8 = URI.open(pic_user8)
 user8.photo.attach(io: file8, filename: "Ariana_Antler.jpg", content_type: "image/png")
 user8.save
@@ -159,10 +159,10 @@ offer3.save!
 
 
 offer4  = Offer.new(
-  user: user8, title: "Anteater needs a pet sitter", description: "We offer you a 10-days rent-free stay in the company of our Anton.
+  user: user8, title: "Anteater needs a pet sitter", description: "I offer you a 10-days rent-free stay in the company of my Anton.
   He is a special kind of pet, so you should be prepared to adapt to his habits and needs.
-  Our comfy two storey home has all the luxury you could wish for and some big ant hills in the garden.
-  Before you contact us, make sure you are not afraid of insects.", pet: "anteater", pet_name: "Anton", pet_description: "He has his ways but super-cute and always good fun ", address: "Ameisenweg 4, 13589 Berlin", neighborhood: "Spandau", start_date: Date.new(2022,12,20), end_date: Date.new(2022,12,30))
+  My comfy two storey home has all the luxury you could wish for and some big ant hills in the garden.
+  Before you contact me, make sure you are not afraid of insects.", pet: "anteater", pet_name: "Anton", pet_description: "He has his ways but super-cute and always good fun ", address: "Ameisenweg 4, 13589 Berlin", neighborhood: "Spandau", start_date: Date.new(2022,12,20), end_date: Date.new(2022,12,30))
 
 file20 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662035912/sitpet4bed/offer4%20user8%20Ms.Antler%20with%20anteater%20Anton/51404659219_0c55b8e9b6_b_juxehh.jpg")
 file21 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662037899/sitpet4bed/offer4%20user8%20Ms.Antler%20with%20anteater%20Anton/4776001255_cbafd69cec_b_hmj51j.jpg")
@@ -172,6 +172,63 @@ offer4.photos.attach(io: file20, filename: "Anteater-flat.jpg", content_type: "i
 offer4.photos.attach(io: file21, filename: "Anteater-anthill.jpg", content_type: "image/png")
 offer4.photos.attach(io: file22, filename: "Anton from Anteater-flat.jpg", content_type: "image/png")
 offer4.save!
+
+
+
+offer5  = Offer.new(
+user: user4, title: "Spider-sitting over Halloween", description: "Here is something for petsitters with a faible for spiders. We have to go on a short holiday and Tito has to be fed and taken care for. Tarantula Tito is used to roam freely in our comfy 3-room apartment on ground floor. He has several hideouts that you need to respect. And make sure you don’t feed him during daytime. Please no contacts by arachnophobiacs.", pet: "Tarantula", pet_name: "Tito", pet_description: "Hairy Tito is used to contact with humans. Don’t worry..", address: "Tempelhofer Damm 56, 12101 Berlin", neighborhood: "Tempelhof", start_date: Date.new(2022,10,30), end_date: Date.new(2022,11,06))
+
+file23 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662639358/sitpet4bed/Offer5%20User4%20steven%20strange%20with%20spider%20tito/50886614576_8b5680a26e_b_ngykq7.jpg")
+file24 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662639361/sitpet4bed/Offer5%20User4%20steven%20strange%20with%20spider%20tito/Bonner_Stammtisch_2C_Petersberg_-_Staatsg_C3_A4ste_Suite__283_29_es3ncb.jpg")
+file25 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662638933/sitpet4bed/Offer5%20User4%20steven%20strange%20with%20spider%20tito/8708946738_7dda5fcd22_b_kyeblx.jpg")
+
+offer5.photos.attach(io: file23, filename: "Spider-flat.jpg", content_type: "image/png")
+offer5.photos.attach(io: file24, filename: "Spider-flat2.jpg", content_type: "image/png")
+offer5.photos.attach(io: file25, filename: "Tito from Spider-flat.jpg", content_type: "image/png")
+offer5.save!
+
+
+offer6  = Offer.new(
+user: user6, title: "Boa Bernie needs a body-builder as petsitter", description: "I am offering a month of rent-free stay in my spacious 4-room apartment in beautiful Kreuzberg. Since I cannot leave my snake unattended and the last petsitter mysteriously disappeared, I have to make sure that you are experienced with big snakes. Physical fitness is required. Ideally you have a body-building- or a wrestling-background.", pet: "Boa Constrictor", pet_name: "Bernie", pet_description: "Bernie is very peaceful and flexible. Once he is attracted to you, he won’t let you go.", address: "Wrangelstraße 2, 10997 Berlin", neighborhood: "Kreuzberg", start_date: Date.new(2022,9,28), end_date: Date.new(2022,10,27))
+
+file26 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662639674/sitpet4bed/offer6%20user6%20William%20Buttler%20-%20Boa%20Constrictor/Room1_myzoxy.jpg")
+file27 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662639673/sitpet4bed/offer6%20user6%20William%20Buttler%20-%20Boa%20Constrictor/Room2_dqzgs9.jpg")
+file28 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662639673/sitpet4bed/offer6%20user6%20William%20Buttler%20-%20Boa%20Constrictor/Boa_qft8ry.jpg")
+
+offer6.photos.attach(io: file26, filename: "Boa-flat.jpg", content_type: "image/png")
+offer6.photos.attach(io: file27, filename: "Boa-flat2.jpg", content_type: "image/png")
+offer6.photos.attach(io: file28, filename: "Bernie from Boa-flat.jpg", content_type: "image/png")
+offer6.save!
+
+
+
+
+offer7  = Offer.new(
+user: user2, title: "Goofy needs a careful petsitter", description: "Have fun with our Guinea Pig Goofy.", pet: "Guinea Pig", pet_name: "Goofy", pet_description: "Goofy is sensitive type. Tread carefully", address: "Kopischstraße 2, 10965 Berlin", neighborhood: "Kreuzberg", start_date: Date.new(2022,12,01), end_date: Date.new(2022,12,05))
+
+file29 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662640351/sitpet4bed/offer7%20user2%20Chris%20Cuddler%20-%20Guinea%20Pig%20Goofy/Bedroom_qop5en.jpg")
+file30 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662640350/sitpet4bed/offer7%20user2%20Chris%20Cuddler%20-%20Guinea%20Pig%20Goofy/Kitchen_ju3je9.jpg")
+file31 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662640350/sitpet4bed/offer7%20user2%20Chris%20Cuddler%20-%20Guinea%20Pig%20Goofy/GuineaPig_edpmdl.jpg")
+
+offer7.photos.attach(io: file29, filename: "Guinea-flat.jpg", content_type: "image/png")
+offer7.photos.attach(io: file30, filename: "Guinea-flat2.jpg", content_type: "image/png")
+offer7.photos.attach(io: file31, filename: "Goofy from Guinea-flat.jpg", content_type: "image/png")
+offer7.save!
+
+
+offer8  = Offer.new(
+user: user1, title: "Tony needs a relaxed petsitter", description: "Have fun with Tony , the chilled-out turtle.", pet: "Turtle", pet_name: "Tony", pet_description: "Tony ... we all can learn from him", address: "Bötzowstraße 57, 10407 Berlin", neighborhood: "Pankow", start_date: Date.new(2022,12,020), end_date: Date.new(2022,12,30))
+
+file32 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662640592/sitpet4bed/offer8%20user1%20Peter%20Wolf%20-%20Turtle%20Tony/Bedroom_o4icck.jpg")
+file33 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662640592/sitpet4bed/offer8%20user1%20Peter%20Wolf%20-%20Turtle%20Tony/LivingRoom_x11ylq.jpg")
+file34 = URI.open("https://res.cloudinary.com/dgn2w2wvl/image/upload/v1662640592/sitpet4bed/offer8%20user1%20Peter%20Wolf%20-%20Turtle%20Tony/TurtleTony_zbjm3p.jpg")
+
+offer8.photos.attach(io: file32, filename: "Guinea-flat.jpg", content_type: "image/png")
+offer8.photos.attach(io: file33, filename: "Guinea-flat2.jpg", content_type: "image/png")
+offer8.photos.attach(io: file34, filename: "Goofy from Guinea-flat.jpg", content_type: "image/png")
+offer8.save!
+
+
 
 puts "Offers Created"
 

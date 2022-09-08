@@ -34,10 +34,6 @@ class OffersController < ApplicationController
     end
   end
 
-  def destroy
-
-  end
-
   private
     def set_params
       params.require(:offer).permit(:title, :description, :address, :pet, :pet_name, :pet_description, :start_date, :end_date, :neighborhood)
