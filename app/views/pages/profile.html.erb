@@ -42,7 +42,7 @@
                             </div>
                           </div>
                       </div>
-
+                     <%= link_to "Delete", destroy_booking_path(booking), class: 'btn btn-danger delete_button', data: {turbo_method: :delete, turbo_confirm: "are you sure you want to Delete ?"} %>
                     <% end %>
                     <% end %>
                     <% end %>
