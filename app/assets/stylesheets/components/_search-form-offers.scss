@@ -2,9 +2,11 @@
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  display: inline-flex;
   .search-form-control {
 
     width: 75%;
+    left: 8px;
   }
   .search-form-control .btn {
     position: absolute;
