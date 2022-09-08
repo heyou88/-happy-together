@@ -18,37 +18,38 @@
     <% end %>
   </div>
 </div>
-<div class="wrapper">
-  <div id="footer-goes-here">
-    <% if current_user == @chatroom.flat_owner %>
-     <% if @chatroom.booking.status == nil %>
-       <%= link_to "Confirm Offer", pending_path(booking: @chatroom.booking, chatroom: @chatroom), method: :post, status: :see_other, class: "btn btn-warning btn-lg mb-3 button_Accept_Offer" %>
-      <% else %>
-       <button type="button" class="btn btn-warning btn-lg mb-3 button_Accept_Offer" disabled>Confirm Offer</button>
-      <% end %>
-    <% else %>
+<div class="chat_box d-flex justify-content-center">
+  <div class="wrapper">
+    <div id="footer-goes-here">
+      <% if current_user == @chatroom.flat_owner %>
       <% if @chatroom.booking.status == nil %>
-       <button class="btn btn-warning btn-lg mb-3 button_Accept_Offer" type="button" disabled>Accept Offer</button>
-      <% elsif @chatroom.booking.status == "pending" %>
-       <%= link_to "Accept Offer", confirm_path(booking: @chatroom.booking, chatroom: @chatroom), method: :post, status: :see_other, class: "btn btn-warning btn-lg mb-3 button_Accept_Offer" %>
-      <% elsif @chatroom.booking.status == "confirmed" %>
-        <button class="btn btn-warning btn-lg mb-3 button_Accept_Offer"type="button" disabled>Confirmed</button>
+        <%= link_to "Confirm Offer", pending_path(booking: @chatroom.booking, chatroom: @chatroom), method: :post, status: :see_other, class: "btn btn-warning btn-lg mb-3 button_Accept_Offer" %>
+        <% else %>
+        <button type="button" class="btn btn-warning btn-lg mb-3 button_Accept_Offer" disabled>Confirm Offer</button>
+        <% end %>
+      <% else %>
+        <% if @chatroom.booking.status == nil %>
+        <button class="btn btn-warning btn-lg mb-3 button_Accept_Offer" type="button" disabled>Accept Offer</button>
+        <% elsif @chatroom.booking.status == "pending" %>
+        <%= link_to "Accept Offer", confirm_path(booking: @chatroom.booking, chatroom: @chatroom), method: :post, status: :see_other, class: "btn btn-warning btn-lg mb-3 button_Accept_Offer" %>
+        <% elsif @chatroom.booking.status == "confirmed" %>
+          <button class="btn btn-warning btn-lg mb-3 button_Accept_Offer"type="button" disabled>Confirmed</button>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-
-  <div id="content-goes-here">
-    <%= simple_form_for [@chatroom, @message],
-    html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f|
-    %>
-      <%= f.input :content,
-        label: false,
-        placeholder: "Message ##{@chatroom.name}",
-        wrapper_html: {class: "flex-grow-1"}
+    </div>
+    <div id="content-goes-here">
+      <%= simple_form_for [@chatroom, @message],
+      html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "d-flex" } do |f|
       %>
-      <div>
-        <%= f.submit ">", class: "btn btn-primary mb-3 button_send" %>
-      </div>
-    <% end %>
+        <%= f.input :content,
+          label: false,
+          placeholder: "Message ##{@chatroom.name}",
+          wrapper_html: {class: "flex-grow-1"}
+        %>
+        <div style="padding: 6px;">
+          <%= f.submit ">", class: "btn btn-primary mb-3 button_send" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

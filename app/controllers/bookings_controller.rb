@@ -38,4 +38,10 @@ class BookingsController < ApplicationController
     booking.save
     redirect_to chatroom_path(chatroom)
   end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to profile_path, status: :see_other
+  end
 end
