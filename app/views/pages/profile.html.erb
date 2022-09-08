@@ -18,8 +18,9 @@
 </div>
         <div class= "">
           <% if @user == current_user %>
-
-              <h1> My Bookings </h1>
+              <div class= "booking">
+                <h1> My Bookings </h1>
+              </div>
                   <% @user.bookings.each do |booking| %>
                       <%= link_to  offer_path(booking.offer) , class:"link" do %>
                     <div class="card-product">

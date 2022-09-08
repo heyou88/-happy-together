@@ -1,6 +1,6 @@
 
 <div class="container text-block home-page">
-    <%= image_tag("Icon.png", :alt => "logo") %>
+    <%= image_tag("Icon.png", :alt => "logo", class: "logo") %>
   <div class="home-content">
     <div class= "search-form">
       <h5>Select a city</h5>
@@ -13,8 +13,8 @@
           </div>
         </form>
     </div>
-    <div class="mt-4">
-        <%= link_to "start",   offers_path, class: "-main" %>
+    <div class="button-container">
+        <%= link_to "start",   offers_path, class: "btn-main" %>
     </div>
     <% if user_signed_in? %>
     <div class="log-in">
