@@ -1,11 +1,11 @@
 .wrapper {
   padding-top: 30px;
-  padding-left: 30px;
+  padding-left: -100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: fit-content;
+  max-width: fit-content !important;
 }
 
 .profile-card__cnt{
@@ -47,9 +47,9 @@
   background: white;
   border: #08799C 1px solid;
   border-radius: 12px;
-  width: 309px;
+
   position: relative;
-  top: 50px;
+
   border-bottom: 2px solid #08799C ;
 }
 .profile-card-photo{
@@ -65,13 +65,23 @@
   box-shadow: 0px 5px 50px 0px rgb(226, 225, 230), 0px 0px 0px 7px rgba(9, 9, 9, 0.5);
 }
 
-photo {
+.photo {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
+
+.booking{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight:500;
+}
+
+
 
 .profile-large {
   width: 80px;
