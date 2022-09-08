@@ -4,11 +4,14 @@
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
+  max-width: 400px;
   width: 100%;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   line-height: 1.4em;
+  font-weight: 500;
+   font-size: 14px;
+   color: #000000;
 
 }
 
@@ -16,11 +19,13 @@
    text-align: center;
    font-family: "Open Sans", sans-serif;
    text-decoration: none;
+   overflow: visible;
   }
 
   .mapboxgl-popup-content a {
     pointer-events: all;
     text-decoration: none;
+
  }
 
  .body{
@@ -29,7 +34,7 @@
 
  .mapboxgl-ctrl-geocoder {
   max-width: none !important;
-
+  margin-top: 10px;
   display: flex;
   width: 100%;
   // border: 1px solid lightgrey;
@@ -41,6 +46,10 @@
 
 .mapboxgl-ctrl-top-right{
   width: 100%;
+  margin-top: 10px;
+  margin-left: 77px;
+  position: relative;
+  left: 10px
   input{
     width: 80%;
   }
