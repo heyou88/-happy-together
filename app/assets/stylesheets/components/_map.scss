@@ -6,7 +6,7 @@
   min-width: 230px;
   max-width: 315px;
   width: 100%;
-  color: #ffffff;
+  // color: #ffffff;
   text-align: center;
   line-height: 1.4em;
 
@@ -16,6 +16,7 @@
    text-align: center;
    font-family: "Open Sans", sans-serif;
    text-decoration: none;
+   background-color: white
   }
 
   .mapboxgl-popup-content a {
@@ -23,9 +24,12 @@
     text-decoration: none;
  }
 
- .body{
-   text-decoration: none;
-  }
+ .mapboxgl-popup-tip {
+  align-self: center;
+  border-left: none;
+  border-right-color: #fff;
+  background-color: gray
+}
 
   .mapboxgl-ctrl-geocoder {
     max-width: none !important;
