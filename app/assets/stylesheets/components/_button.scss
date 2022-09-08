@@ -1,11 +1,14 @@
 .btn-main {
   background-color: #FF9F1C;
   color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   border: none;
-  font-size: 1.4rem;
-  padding: 7px 45px;
   text-decoration: none;
+  font-size: 20px;
+  padding: 11px 65px;
+  height: 50px;
+  width: 175px;
+
 
   &:hover {
     background-color: #7b8079;
@@ -19,7 +22,7 @@
   height: 50px;
   width: 175px;
   padding: 10px 24px;
-  border-radius: 50px;
+  border-radius: 15px;
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
@@ -46,4 +49,13 @@ color: azure;
 
 .offer_button{
   color: #FF9F1C;
+}
+
+.delete_button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 25px;
+  color: #fcfcfc;
 }
