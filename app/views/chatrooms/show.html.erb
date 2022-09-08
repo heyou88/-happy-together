@@ -1,5 +1,4 @@
-
-<div class="chatroom" style="background-color: white;"
+<div class="chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
@@ -19,22 +18,10 @@
     <% end %>
   </div>
 </div>
-
 <div class="chat_box d-flex justify-content-center">
   <div class="wrapper">
     <div id="footer-goes-here">
       <% if current_user == @chatroom.flat_owner %>
-
-<div class="wrapper" style="background-color: white;">
-  <div id="footer-goes-here">
-    <% if current_user == @chatroom.flat_owner %>
-     <% if @chatroom.booking.status == nil %>
-       <%= link_to "Confirm Offer", pending_path(booking: @chatroom.booking, chatroom: @chatroom), method: :post, status: :see_other, class: "btn btn-warning btn-lg mb-3 button_Accept_Offer" %>
-      <% else %>
-       <button type="button" class="btn btn-warning btn-lg mb-3 button_Accept_Offer" disabled>Confirm Offer</button>
-      <% end %>
-    <% else %>
-
       <% if @chatroom.booking.status == nil %>
         <%= link_to "Confirm Offer", pending_path(booking: @chatroom.booking, chatroom: @chatroom), method: :post, status: :see_other, class: "btn btn-warning btn-lg mb-3 button_Accept_Offer" %>
         <% else %>
