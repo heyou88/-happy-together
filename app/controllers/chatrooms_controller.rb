@@ -7,7 +7,7 @@ class ChatroomsController < ApplicationController
   def create
     @chatroom = Chatroom.new
     flat_owner = User.find(params["user_pet_owner"])
-    @chatroom.name = "Messenger"
+    @chatroom.name = flat_owner.user_name
     @chatroom.flat_owner = flat_owner
     @chatroom.pet_sitter = current_user
     @booking = Booking.new
